@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="currentSong"
+            type="com.company.miniproject1.model.Song" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#252422"
+        tools:context=".activity.QueuePage">
+        <TextView
+            android:id="@+id/queue_pagetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Queue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- RecyclerView for the queue -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/queue_page_RecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/queue_pagetv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/queue_page_seek_bar" />
+
+
+        <!-- SeekBar -->
+        <SeekBar
+            android:id="@+id/queue_page_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressTint="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/currentTimeTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/queue_page_RecyclerView" />
+
+        <!-- Current Time TextView -->
+        <TextView
+            android:id="@+id/currentTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="0:00"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/queue_page_seek_bar" />
+
+        <!-- Final Time TextView -->
+        <TextView
+            android:id="@+id/songDurationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="0:00"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/queue_page_seek_bar" />
+
+        <ImageView
+            android:id="@+id/queue_page_pause_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="138dp"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/ic_pause"
+            app:tint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/songDurationTv"
+            app:layout_constraintStart_toEndOf="@+id/currentTimeTv"
+            app:layout_constraintTop_toBottomOf="@+id/queue_page_seek_bar" />
+
+        <ImageView
+            android:id="@+id/queue_page_play_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="138dp"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/ic_play"
+            app:tint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/songDurationTv"
+            app:layout_constraintStart_toEndOf="@+id/currentTimeTv"
+            app:layout_constraintTop_toBottomOf="@+id/queue_page_seek_bar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

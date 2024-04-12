@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MiniProject1</string>
+    <string name="app_name_morning">Good Morning</string>
+    <string name="app_name_afternoon">Good Afternoon</string>
+    <string name="app_name_evening">Good Evening</string>
+
+    <string name="get_started_text">Welcome To \n Music Player App</string>
+    <string name="forgot_password_msg">Don\'t worry! It happens. Please enter the email address associated with your account</string>
+    <string name="on_submit_msg">Check out your mailbox. You will receive an email where you can reset your password</string>
+    <string name="default_web_client_id">862611756941-o85deo9v7s705jf51ba7sjobq8mvdilb.apps.googleusercontent.com</string>
+
+</resources>
