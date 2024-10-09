@@ -1,1 +1,1 @@
-If your are reading this please don't mind the code. It's a very messy project with no code architecture made for the sake of mini project in my curriculum. Also it was made in a very short span of time and when I was very new to all this. But I still managed to made a decent project with lots of bugs
+
